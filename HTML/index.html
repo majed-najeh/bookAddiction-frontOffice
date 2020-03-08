@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Book</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .solde {
+            margin-left: 1rem;
+            font-size: 0.9rem;
+            color: cadetblue;
+            text-decoration: line-through;
+        }
+
+        .card-img-top {
+            height: 260px;
+            width: 200px;
+        }
+        .filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+    </style>
+
+</head>
+
+<body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " style=" background-color: #e3f2fd;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Book Addicton</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#exampleModal">
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">shopping cart
+                            <span id="shopcartnbr" class="badge badge-pill badge-primary">0</span></a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+
+
+    <!-- Content here -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3" id="myBtnContainer">
+                <div class="col" >
+                    <h1 class="my-4">Catégories</h1>
+                    <div class="list-group"></div>
+                    <a href="#" class="list-group-item">all books</a>
+                    <a href="#" class="list-group-item">computing</a>
+                    <a href="#" class="list-group-item">biography</a>
+                    <a href="#" class="list-group-item">Business</a>
+                </div>
+
+
+            </div>
+
+            <div class="col-lg-9">
+                <div class="row my-4">
+
+
+                    <div class=" filterDiv computing col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a class="text-center" href="#">
+                                <img class="card-img-top" src="../img/7.jpg" alt="">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="#">Clean Architecture </a> </h5>
+                                <p> 20$ <span class="solde"> 50$</span></p>
+
+                            </div>
+                            <div class="card-footer">
+                                <a href="#">
+                                    <button data-toggle="modal" data-target="#exampleModal" type="button"
+                                        onclick="addtocart('Clean Architecture')" class="btn btn-secondary btn-block text-white">add to
+                                        card</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" filterDiv computing col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a class="text-center" href="#">
+                                <img class="card-img-top" src="../img/3.jpg" alt="">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="#"> Double Vision</a> </h5>
+                                <p> 30$ </span></p>
+
+                            </div>
+
+                            <div class="card-footer">
+                                <a href="#">
+                                    <button data-toggle="modal" data-target="#exampleModal" type="button"
+                                    onclick="addtocart(' Double Vision')" class="btn btn-secondary btn-block text-white">add to
+                                    card</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filterDiv computing col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a class="text-center" href="#">
+                                <img class="card-img-top" src="../img/6.jpg" alt="">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="#">Clean Code</a> </h5>
+                                <p> 25$ <span class="solde"> 50$</span></p>
+
+                            </div>
+                            <div class="card-footer">
+                                <a href="#">
+                                    <button data-toggle="modal" data-target="#exampleModal" type="button"
+                                    onclick="addtocart('Clean Code')" class="btn btn-secondary btn-block text-white">add to
+                                    card</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" filterDiv biography col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a class="text-center" href="#">
+                                <img class="card-img-top" src="../img/4.jpg" alt="">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="#">The Library Book Sun Oralean</a> </h5>
+                                <p> 200$</p>
+
+                            </div>
+
+                            <div class="card-footer">
+                                <a href="#">
+                                    <button data-toggle="modal" data-target="#exampleModal" type="button"
+                                    onclick="addtocart('The Library Book Sun Oralean')" class="btn btn-secondary btn-block text-white">add to
+                                    card</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filterDiv biography col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a class="text-center" href="#">
+                                <img class="card-img-top" src="../img/2.png" alt="">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="#">Cédigo limpio</a> </h5>
+                                <p> 80$ <span class="solde"> 100$</span></p>
+
+                            </div>
+
+                            <div class="card-footer">
+                                <a href="#">
+                                    <button data-toggle="modal" data-target="#exampleModal" type="button"
+                                    onclick="addtocart('Cédigo limpio')" class="btn btn-secondary btn-block text-white">add to
+                                    card</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filterDiv biography col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a class="text-center" href="#">
+                                <img class="card-img-top" src="../img/1.jpg" alt="">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="#"></a> The Hobbit</h5>
+                                <p> 20$ <span class="solde"> 50$</span></p>
+
+                            </div>
+
+                            <div class="card-footer">
+                                <a href="#">
+                                    <button data-toggle="modal" data-target="#exampleModal" type="button"
+                                    onclick="addtocart(' The Hobbit')" class="btn btn-secondary btn-block text-white">add to
+                                    card</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" filterDiv Business col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a class="text-center" href="#">
+                                <img class="card-img-top" src="../img/5.jpg" alt="">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="#"> The Book Of You</a> </h5>
+                                <p> 90$ </p>
+
+                            </div>
+
+                            <div class="card-footer">
+                                <a href="#">
+                                    <button data-toggle="modal" data-target="#exampleModal" type="button"
+                                    onclick="addtocart('The Book Of You')" class="btn btn-secondary btn-block text-white">add to
+                                    card</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+
+    <!--footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="text-center text-white">
+                Copyright &copy; Med3i 2020
+            </p>
+
+        </div>
+    </footer>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id ="modalbody" class="modal-body">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- script    -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="../java/controle.js"></script>
+</body>
+
+</html>
